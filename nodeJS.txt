@@ -1,0 +1,58 @@
+node js --> environment to run js  outside browser built on chrome's v8 js engine
+
+js:
+-----
+DOM, window, interactive Apps, no filesystem, fragmentation, ES6 modules
+
+Nodejs:
+-------
+No DOM, No window, server side Apps, filesystem, versions, commonJS
+
+when we write node in the terminal it starts the (REPL) after we finish we write (.exit) to end the REPL
+
+REPL is "read–eval–print loop"--> It’s a program that loops through three different states:
+1) a read state --> where the program reads input from a user.
+2) the eval state --> where the program evaluates the user’s input.
+3) the print state --> where the program prints out its evaluation to a console.
+Then it loops through these states again.
+
+When you install Node, it comes with a built-in JavaScript REPL. You can access the REPL by typing the command node (with nothing after it) into the terminal and hitting enter. A > character will show up in the terminal, indicating the REPL is running and prompting your input. The Node REPL will evaluate your input line by line.
+
+By default, you indicate the input is ready for eval when you hit enter. If you’d like to type multiple lines and then have them evaluated at once, you can type .editor while in the REPL. Once in “editor” mode, you can type control + d when you’re ready for the input to be evaluated. Each session of the REPL has a single shared memory; you can access any variables or functions you define until you exit the REPL.
+
+node js is built around concept of modules where all additional functionalities are stored in modules and reading files is inside fs module.
+
+all core Modules are saved in lib and can be called by require (const events = require('events')):
+----------------------------------------------------------------------------------------------------
+
+** Global Module:
+------------------
+1) Console module:
+-------------------
+console.log()
+console.assert()
+console.table()
+
+2) process module:
+-------------------
+process.env
+process.memoryUsage()
+process.memoryUsage().heapUsed
+process.argv
+
+3) __dirname --> path to current directory
+4) __filename --> file name
+5) require --> function to use modules(os, path,fs,http)
+6) module ---> info about current module(file)
+
+node implementation for backend side so we have some functionality on server side
+js
+-----------------------------------------------------------------------------------------------------
+synch vs asynch:
+-----------------
+synch --> means if one user run a task, it blocks other users to run the same task till the first one is done and this is very time consuming
+
+asynch-->
+
+----------------------------------------------------------------------------------------------------
+API--> service in which we can request data(data which API sent to client when requested)
